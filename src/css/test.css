@@ -1,0 +1,151 @@
+.content-block{
+    margin: 0 auto;
+    text-align:center;
+}
+.bar{
+    background:#fff;
+}
+.s-header{
+    position:relative;
+    height:2.2rem;
+}
+.search-area{
+    position:absolute;
+    left:2rem;
+    right:2rem;
+    top:0;
+    background:#fff;
+}
+.s-content{
+    position:relative;
+}
+.bar .searchbar{
+    background:#fff;
+}
+.search-input{
+    background:rgba(0,0,0,.1);
+    border-radius:0.125rem;
+}
+.search-input input{
+    background:#F0F2F5;
+}
+.s-banner{
+    position:relative;
+    margin:0 auto;
+    text-align:center;
+}
+.s-banner .mask{
+  position:relative;
+  height:5.85rem;  
+}
+.s-banner .mask-bg{
+    position:absolute;
+    width:100%;
+    height:100%;
+    top:0;
+    left:0;
+    background:rgba(0,0,0,.5);
+}
+.s-banner .mask-img{
+    z-index:-1;
+    width:100%;
+}
+.s-info{
+    position:absolute;
+    width:100%;
+    bottom:0;
+    left:0;
+    padding:0 0.5rem 0.5rem 0.5rem;
+    display:-webkit-flex!important;
+}
+.s-logo{
+    width:4.5rem;
+    height:1.5rem;
+}
+.s-home-title{
+    margin-left:0.25rem;
+    color:#fff;
+    display:-webkit-flex!important;
+    flex-direction:column;
+}
+.s-bar-classify{
+    position:static;
+    z-index: 10;
+
+}
+.s-bar.sticky{
+    position: fixed;
+    left: 0;
+    width: 100%;
+    z-index: 201;
+    top: 0;
+}
+.s-name{
+    font-size:0.65rem;
+}
+.s-logo img{
+    width:100%;
+    height:100%;
+}
+.s-classify{
+    line-height:2.2rem;
+    text-align:center;
+}
+.s-classify li{
+    cursor:pointer;
+}
+.s-classify li.cur{
+    color:red;
+}
+.pro-list{
+    margin:0.1rem 0 0 0;
+    padding:0 0.1rem;
+    overflow:hidden;
+    height:auto;
+    margin-bottom:0.5rem;
+}
+.pro-list li{
+    float:left;
+    margin:0.1rem;
+    width:9.075rem;
+    background:#fff;
+}
+.pro-list li.cur{
+    color:red;
+}
+.pro-list li a{
+    display:block;
+    padding:0 0.375rem;
+}
+.pro-list li .pro-img img{
+    width:100%;
+}
+.pro-list li .pro-desc{
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    height:1.8rem;
+    line-height:0.9rem;
+}
+.pro-list .pro-price{
+    color:#F23030;
+    font-size:0.625rem;
+}
+.pro-list .pro-price .pyen{
+    font-size:0.4rem;
+}
+.pro-list .pro-price .pnum{
+    font-weight:bold;
+}
+.goTop{
+    position:fixed;
+    bottom:2.5rem;
+    right:0.5rem;
+    width:3rem;
+    height:3rem;
+    background:url(img/gotop.png) no-repeat;
+    background-size:contain;
+    z-index:100;
+}
