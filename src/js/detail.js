@@ -3,6 +3,7 @@
 
 	Wine.dview = {
 		init: function(){
+			this.initFilter();
 			this.initListener();
 			this.configSwiper();
 		},
@@ -20,14 +21,32 @@
 			});
 
 			//加入购物车
-			$("#S_add_cart").on('click', function(){
+			$("#S_add_cart").one('click', function(){
 				self.addToCart();
+			})
+		},
+
+		initFilter: function(){
+			$(".filter-option span").on('click', function(){
+				$(this).addClass('selected').siblings().removeClass('selected');
+			});
+			var $quantity = $("#quantity");
+					
+			$(".quantity ").on("click", "a.num-oper", function(){
+				var count = parseInt($quantity.val().toString());
+				if($(this).attr('id') == 'quantityMinus' && count > 0){
+					--count;
+				}else if($(this).attr('id') == 'quantityPlus'){
+					++count;
+				}
+				$quantity.val(count);
 			})
 		},
 		configSwiper: function(){
 			var config = {
 				speed: 400,
-			    spaceBetween: 100
+			    spaceBetween: 100,
+			    pagination: '.swiper-pagination',
 			};
 			$(".swiper-container").swiper(config); 
 		},
