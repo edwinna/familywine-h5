@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>填写订单</title>
+	<title>收银台</title>
 	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport" />
     <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm.min.css">
     <link rel="stylesheet" href="http://g.alicdn.com/msui/sm/0.6.2/css/sm-extend.min.css">
@@ -18,15 +18,24 @@
         </div>
     </header>
     <div class="s-content">
-    	<div class="pay-item">
-    		支付方式
-    	</div>
-    	<div class="pay-item">
-    		
-    	</div>
-    	<div class="pay-item">
-    		
-    	</div>
+        <div class="pay-row">
+            <div class="fl txt">订单金额</div>
+            <div class="fr price"><i>169.00</i>元</div>
+        </div>
+    	<a class="pay-row">
+    		<div class="fl txt"><i class="icon icon-wechat"></i><span class="icon-r">微信支付</span></div>
+            <span class="enter"></span>
+    	</a>
+    	<a class="pay-row">
+            <div class="fl txt"><i class="icon icon-cpay"></i><span class="icon-r">转账支付</span></div>
+            <span class="enter"></span>
+    	</a>
+        <a class="pay-row">
+            <div class="fl txt"><i class="icon icon-offline"></i><span class="icon-r">线下支付</span></div>
+            <span class="enter"></span>
+        </a>
     </div>
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src="js/pay.js"></script>
 </body>
 </html>

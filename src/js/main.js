@@ -1,17 +1,13 @@
 (function($,win){
-	Wine = win.Wine || {}
+	win.Wine = win.Wine || {}
 
-	Wine = {
+	Wine.main = {
 		init: function(){
 			this.initListener();
 		},
 		initListener: function(){
-			var $goTop = $("#S_gotop");
-			var h = window.innerHeight || window.screen.height;
-			
-			$(win).on('scroll', function(){
-				(window.pageYOffset < 1.2* h) ? $goTop.addClass('hide') : $goTop.removeClass('hide');
-			})
+			Wine.util.backTop();
+			Wine.util.navMore();
 			$(".s-classify li").on("click", function(){  
 				var self = $(this);
 				self.addClass('cur').siblings().removeClass('cur');
@@ -28,9 +24,7 @@
 
 			this.navFixTop("S_classify");  //分类置顶
 
-			$goTop.on("click", function(){
-				win.scrollTo(0,0); 
-			});
+		
 		},
 	
 		navFixTop: function(el){
@@ -57,7 +51,7 @@
 })(Zepto,window)
 
 $(function(){
-	Wine.init();
+	Wine. main.init();
 })
 
 

@@ -30,17 +30,18 @@
 			$(".filter-option span").on('click', function(){
 				$(this).addClass('selected').siblings().removeClass('selected');
 			});
-			var $quantity = $("#quantity");
+			Wine.util.counter($('.quantity'));
+			// var $quantity = $("#quantity");
 					
-			$(".quantity ").on("click", "a.num-oper", function(){
-				var count = parseInt($quantity.val().toString());
-				if($(this).attr('id') == 'quantityMinus' && count > 0){
-					--count;
-				}else if($(this).attr('id') == 'quantityPlus'){
-					++count;
-				}
-				$quantity.val(count);
-			})
+			// $(".quantity ").on("click", "a.num-oper", function(){
+			// 	var count = parseInt($quantity.val().toString());
+			// 	if($(this).attr('id') == 'quantityMinus' && count > 0){
+			// 		--count;
+			// 	}else if($(this).attr('id') == 'quantityPlus'){
+			// 		++count;
+			// 	}
+			// 	$quantity.val(count);
+			// })
 		},
 		configSwiper: function(){
 			var config = {

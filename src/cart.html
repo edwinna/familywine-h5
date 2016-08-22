@@ -15,21 +15,53 @@
 	            <a class="button button-link button-nav pull-left" href="javascript:void(0)" data-transition='slide-out'>
 	                <span class="icon icon-left"></span>
 	            </a>
+                <a class="icon icon-app pull-right"></a>
 	            <h1 class="title">购物车</h1>
+                <div class="nav-more hide">
+                    <ul class="nav-more-list">
+                        <li>
+                            <a href="index.html" class="nav-more-item">
+                                <i class="nav-icon nav-icon-home"></i>
+                                <span>首页</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="cart.html" class="nav-more-item">
+                                <i class="nav-icon nav-icon-cart"></i>
+                                <span>购物车</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="search.html" class="nav-more-item">
+                                <i class="nav-icon nav-icon-search"></i>
+                                <span>搜索</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="userCenter.html" class="nav-more-item">
+                                <i class="nav-icon nav-icon-user"></i>
+                                <span>个人中心</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
 	        </div>
     	</header>
     	<section class="s-cart-wrapper s-floor f14 bgw">
     		<div class="cart-title border-b">
-    			<span class="icon icon-cart"></span>
-    			<a href="">贵州茅台集团全家</a>
+                <div class="cart-ck-wrapper">
+                    <input type="checkbox" class="cart-checkbox" id="checkAll">
+                    <label class="cart-ck cart-ck-all" for="checkAll"></label>    
+                </div>
+                <a class="stitle" href="index.html"> 贵州茅台集团全家</a>
     		</div>
     		<div class="cart-content">
     			<ul class="cart-list">
-    				<li class="cart-item">
-    					<input type="hidden" >
-    					<span class="cart-ck">
-    						
-    					</span>
+    				<li class="cart-item" data-index="1">
+                        <div class="cart-ck-wrapper">
+                            <input type="checkbox" class="cart-checkbox" id="checkbox01">
+                            <label class="cart-ck" for="checkbox01"></label>
+                        </div>
     					<div class="cart-core" >
     						<a href="" class="cart-col-1">
     							<img src="http://img10.360buyimg.com/n7/jfs/t721/2/459673438/343351/c878a826/54b32d46Nc6bb3f85.jpg!q70.jpg" alt="">
@@ -44,31 +76,79 @@
     							<div class="cart-num"> 
     								<span class="num-count">1</span>
     								<div class="cart-btn">
-			    						<a href="javascript:void(0);">
+			    						<div class="btn-sub">
 			    							<span class="right-gap"></span>
-			    							<span class="btn-edit">编辑</span>
-			    						</a>
+			    							<span class="cbtn btn-edit">编辑</span>
+			    						</div>
+                                        <div class="btn-sub hide">
+                                            <span class="cbtn btn-delete">删除</span>
+                                            <i class="right-gap"></i>
+                                            <span class="cbtn btn-complete">完成</span>
+                                        </div>
     								</div>
+                                    <!-- 默认隐藏,计数器-->
+                                    <div class="hide cart-counter num-wrapper quantity">
+                                        <a class="num-oper num-minus" value="quantityMinus">
+                                            <em>-</em>
+                                        </a>
+                                        <input type="tel" class="num" value="1" >
+                                        <a class="num-oper num-plus" value="quantityPlus">
+                                            <em>+</em>
+                                        </a>
+                                    </div>
     							</div>
-							   <!-- 默认隐藏,计数器-->
-    							<div class="num-wrapper edit-counter hide">
-                                    <input type="hidden"  value="200">
-                                    <a class="num-minus">
-                                        <em id="minus">-</em>
-                                    </a>
-                                    <input type="tel" class="num" size="4" value="1">
-                                    <a class="num-plus" id="quantityPlus">
-                                        <em id="plus">+</em>
-                                    </a>
+							   
+    						</div>
+    					</div>
+    				</li>
+    				<li class="cart-item" data-index="2">
+    					<div class="cart-ck-wrapper">
+                            <input type="checkbox" class="cart-checkbox" id="checkbox02">
+                            <label class="cart-ck" for="checkbox02"></label>
+                        </div>
+    					<div class="cart-core" >
+    						<a href="" class="cart-col-1">
+    							<img src="http://img10.360buyimg.com/n7/jfs/t721/2/459673438/343351/c878a826/54b32d46Nc6bb3f85.jpg!q70.jpg" alt="">
+    							<span ></span>
+    						</a>
+    						<div class="cart-col-2">
+    							<p class="cart-pname">贵州茅台集团技开全家福荣耀100白酒 浓香型52度茅台白酒 500ml*1瓶 茅台酒特价</p> 
+    							<div class="cart-price">
+    								<i>¥</i>
+    								<strong>386</strong>
+    							</div>
+    							<div class="cart-num"> 
+                                    <span class="num-count">1</span>
+                                    <div class="cart-btn">
+                                        <div class="btn-sub">
+                                            <span class="right-gap"></span>
+                                            <span class="cbtn btn-edit">编辑</span>
+                                        </div>
+                                        <div class="btn-sub hide">
+                                            <span class="cbtn btn-delete">删除</span>
+                                            <i class="right-gap"></i>
+                                            <span class="cbtn btn-complete">完成</span>
+                                        </div>
+                                    </div>
+                                    <!-- 默认隐藏,计数器-->
+                                    <div class="hide cart-counter num-wrapper quantity">
+                                        <a class="num-oper num-minus" value="quantityMinus">
+                                            <em>-</em>
+                                        </a>
+                                        <input type="tel" class="num" value="1">
+                                        <a class="num-oper num-plus" value="quantityPlus">
+                                            <em>+</em>
+                                        </a>
+                                    </div>
                                 </div>
     						</div>
     					</div>
     				</li>
-    				<li class="cart-item">
-    					<input type="hidden" >
-    					<span class="cart-ck">
-    						
-    					</span>
+    				<li class="cart-item" data-index="3">
+    					<div class="cart-ck-wrapper">
+                            <input type="checkbox" class="cart-checkbox" id="checkbox03">
+                            <label class="cart-ck" for="checkbox03"></label>
+                        </div>
     					<div class="cart-core" >
     						<a href="" class="cart-col-1">
     							<img src="http://img10.360buyimg.com/n7/jfs/t721/2/459673438/343351/c878a826/54b32d46Nc6bb3f85.jpg!q70.jpg" alt="">
@@ -81,63 +161,28 @@
     								<strong>386</strong>
     							</div>
     							<div class="cart-num"> 
-    								<span class="num-count">1</span>
-    								<div class="cart-btn">
-			    						<a href="javascript:void(0);">
-			    							<span class="right-gap"></span>
-			    							<span class="btn-edit">编辑</span>
-			    						</a>
-    								</div>
-    							</div>
-    							 <!-- 默认隐藏,计数器-->
-    							<div class="num-wrapper edit-counter hide">
-                                    <input type="hidden"  value="200">
-                                    <a class="num-minus">
-                                        <em id="minus">-</em>
-                                    </a>
-                                    <input type="tel" class="num" size="4" value="1">
-                                    <a class="num-plus" id="quantityPlus">
-                                        <em id="plus">+</em>
-                                    </a>
-                                </div>
-    						</div>
-    					</div>
-    				</li>
-    				<li class="cart-item">
-    					<input type="hidden" >
-    					<span class="cart-ck">
-    						
-    					</span>
-    					<div class="cart-core" >
-    						<a href="" class="cart-col-1">
-    							<img src="http://img10.360buyimg.com/n7/jfs/t721/2/459673438/343351/c878a826/54b32d46Nc6bb3f85.jpg!q70.jpg" alt="">
-    							<span ></span>
-    						</a>
-    						<div class="cart-col-2">
-    							<p class="cart-pname">贵州茅台集团技开全家福荣耀100白酒 浓香型52度茅台白酒 500ml*1瓶 茅台酒特价</p> 
-    							<div class="cart-price">
-    								<i>¥</i>
-    								<strong>386</strong>
-    							</div>
-    							<div class="cart-num"> 
-    								<span class="num-count">1</span>
-    								<div class="cart-btn">
-			    						<a href="javascript:void(0);">
-			    							<span class="right-gap"></span>
-			    							<span class="btn-edit">编辑</span>
-			    						</a>
-    								</div>
-    							</div>
-    							 <!-- 默认隐藏,计数器-->
-    							<div class="num-wrapper edit-counter hide">
-                                    <input type="hidden"  value="200">
-                                    <a class="num-minus">
-                                        <em id="minus">-</em>
-                                    </a>
-                                    <input type="tel" class="num" size="4" value="1">
-                                    <a class="num-plus" id="quantityPlus">
-                                        <em id="plus">+</em>
-                                    </a>
+                                    <span class="num-count">1</span>
+                                    <div class="cart-btn">
+                                        <div class="btn-sub">
+                                            <span class="right-gap"></span>
+                                            <span class="cbtn btn-edit">编辑</span>
+                                        </div>
+                                        <div class="btn-sub hide">
+                                            <span class="cbtn btn-delete">删除</span>
+                                            <i class="right-gap"></i>
+                                            <span class="cbtn btn-complete">完成</span>
+                                        </div>
+                                    </div>
+                                    <!-- 默认隐藏,计数器-->
+                                    <div class="hide cart-counter num-wrapper quantity">
+                                        <a class="num-oper num-minus" value="quantityMinus">
+                                            <em>-</em>
+                                        </a>
+                                        <input type="tel" class="num" size="4" value="1" >
+                                        <a class="num-oper num-plus" value="quantityPlus">
+                                            <em>+</em>
+                                        </a>
+                                    </div>
                                 </div>
     						</div>
     					</div>
@@ -147,17 +192,17 @@
     	</section>
     	<footer class="s-bar-bottom">
     		<div class="s-pay-info">
-    			<div class="cart-ck-wrapper">
+    			<!-- <div class="cart-ck-wrapper">
     				<input type="hidden" >
     				<span class="cart-ck"></span>
     				<i class="checkall">全选</i>                        
-    			</div>
+    			</div> -->
     			<div class="s-pay-account">
-    				<p class="pay-row total f14">
+    				<p class="pay-account total f14">
     					<span>合计：</span> 
     					<i>¥</i><i>386</i>
     				</p>
-    				<p class="pay-row">
+    				<p class="pay-account">
     					<span>总额：</span>
     					<span><i>¥</i><i>386</i></span>
     					<span>立减：</span>
@@ -171,7 +216,11 @@
            	</div>
         </footer>
 	</div>
-	 
+    <script type='text/javascript' src='http://g.alicdn.com/sj/lib/zepto/zepto.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm.min.js' charset='utf-8'></script>
+    <script type='text/javascript' src='http://g.alicdn.com/msui/sm/0.6.2/js/sm-extend.min.js' charset='utf-8'></script>
+    <script type="text/javascript" src="js/util.js"></script>
+    <script type='text/javascript' src='js/cart.js'></script>
 
 </body>
 </html>

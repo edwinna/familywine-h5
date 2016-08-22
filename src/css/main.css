@@ -164,15 +164,55 @@ a{
 .bar .icon{
     line-height:.8rem; 
 }
+.modal-button{
+    font-size:.7rem;
+    border-radius:3px;
+    color:#686868;
+    text-align:center;
+}
+.modal-text{
+    font-size:.7rem;
+}
+.modal-button.modal-button-bold{
+    color:#f35656;
+}
+input[type='checkbox']{
+    -webkit-appearance:none;
+}
+.bar .icon{
+    padding:0.7rem .1rem;
+}
+.bar-tab .tab-item .icon{
+    left:-.1rem;
+    top:0;
+}
+.bar-tab .tab-item .icon~.tab-label{
+    top:-.05rem;
+}
+.bar-tab .tab-item .icon{
+    font-size:1rem;
+}
+.s-content{
+    margin-bottom:15px;
+}
+.page, .page-group{
+    overflow:inherit;
+}
 /* ==========================================================================
    page styles.
    index page
    ========================================================================== */
-.s-page-index,.w{
+.w{
     min-width: 320px;
     max-width: 750px;
 }
+.s-page-index{
+    margin:0 auto;
+}
 
+.s-index-bar .bar{
+    background:#fff;
+}
 .bar{
     background:#fff;
 }
@@ -183,7 +223,7 @@ a{
 
 .search-area{
     position:absolute;
-    left:2rem;
+    left:15px;
     right:2rem;
     top:0;
     background:#fff;
@@ -362,6 +402,72 @@ a{
 .search-input .icon{
     top:25%;
 }
+.nav-more{
+    position:absolute;
+    right:.1rem;
+    top:2rem;
+    z-index:1001;
+}
+.nav-more-list{
+    background:#5a5f6b;
+    border-radius:5px;
+    z-index:1001;
+} 
+.nav-more-list:after{
+    content:"";
+    position:absolute;
+    top:0;
+    right:10px;
+    display:inline-block;
+    width:0;
+    height:0;
+    margin-top:-20px;
+    border-style:solid;
+    border-color:transparent transparent #6f7685;
+    border-width:10px;
+}
+.nav-more-list li{
+    padding:0 .3rem;
+    text-indent:.3rem;
+    height:44px;
+    line-height:44px;
+    border-bottom:1px solid #6f7685;
+}
+
+.nav-more-item{
+     display:block;
+    color:#fff;
+    font-size:14px;
+    line-height:44px;
+}
+.nav-more-item span{
+    display:inline-block;
+}
+.nav-icon{
+    position:relative;
+    top:8px;
+    display:inline-block;
+    width:30px;
+    height:30px;
+}
+.nav-icon-home{
+    background:url(img/home.png) no-repeat;
+    background-size:contain;
+}
+.nav-icon-cart{
+    background:url(img/cart.png) no-repeat;
+    background-size:contain;
+}
+.nav-icon-search{
+    background:url(img/search.png) no-repeat;
+    background-size:contain;
+}
+.nav-icon-user{ 
+    background:url(img/user.png) no-repeat;
+    background-size:contain;
+}
+
+
 /* ==========================================================================
    page styles.
    product detail page
@@ -372,7 +478,7 @@ a{
 }
 .content-block{
     padding:0;
-    margin:1.5rem 0;
+    margin:2.2rem 0;
 }
 .s-page{
     font-size:.6rem;
@@ -433,7 +539,13 @@ a{
 }
 .slide-ul{
     width:320px;
-    height:320px;
+    height:350px;
+}
+.swiper-container-horizontal>.swiper-pagination{
+    bottom:0;
+}
+.swiper-pagination-bullet-active{
+    background:rgba(0,0,0,.7);
 }
 
 .pro-title{
@@ -468,6 +580,7 @@ a{
     border-radius:3px;
     padding:5px;
     margin-right:8px;
+    cursor:pointer;
 }
 
 .sel-option.selected{
@@ -498,6 +611,7 @@ a{
     width: 24px;
     overflow: hidden;
     text-indent: -200px;
+    cursor:pointer;
 }
 .num-minus em{
     background: url(img/cart-number.png) no-repeat 0 -18px;
@@ -545,7 +659,7 @@ a{
     font-size:0;
 }
 .aftersale-info{
-    padding:.3rem;
+    padding:1rem .3rem;
 }
 .aftersale-info p{
     line-height:25px;
@@ -563,9 +677,16 @@ a{
     margin-top:15px;
     border-bottom:1px solid #dcdcdc;
 }
+
 .cart-title{
+    position:relative;
     height:35px;
     line-height:35px;
+}
+.cart-title .stitle{
+    margin-left:25px;
+}
+.cart-ck.cart-ck-all{
 }
 .cart-item{
     position:relative;
@@ -575,9 +696,15 @@ a{
 .cart-list li:last-child{
     border-bottom:0;
 }
+.cart-ck-wrapper{
+    position:absolute;
+    left:0;
+    top:50%;
+    -webkit-transform:translateY(-50%);
+}
 .cart-ck{
     position:absolute;
-    top:25px;
+    top:50%;
     left:0;
     -webkit-transform:translateY(-50%);
     width:20px;
@@ -585,6 +712,13 @@ a{
     margin: 0 auto;
     background: url(img/shopping.cart.spirits.icns1.png) 0 1px no-repeat;
     background-size: 50px 150px;
+}
+.cart-ck-wrapper .cart-checkbox:checked + label{
+    background-position: -25px 0;
+}
+
+.cart-ck.checked,.cart-ck-all.checked{
+    background-position: -25px 0;
 }
 .cart-list{
     overflow:hidden;
@@ -634,16 +768,24 @@ a{
 .cart-btn .btn-edit{
     font-size:13px;
 }
+.cart-btn .btn-sub{
+    display:inline-block;
+    font-size:13px;
+}
 
 .cart-btn .right-gap{
     display:inline-block;
     width: 1px;
-    height: 13px;
+    height: 16px;
     background-color: #e3e5e9;
     vertical-align: top;
 }
-
+.cart-btn .cbtn{
+    display:inline-block;
+    cursor:pointer;
+}
 .cart-btn .btn-edit{
+    display:inline-block;
     font-size:13px;
 }
 
@@ -661,16 +803,12 @@ a{
 .s-pay-info{
     position:relative;
 }
-.cart-ck-wrapper{
-    position:absolute;
-    left:10px;
-    top:0;
-}
+
 .cart-ck-wrapper span{
     display:inline-block;
 }
 .s-pay-account{
-    margin-left:75px;
+    margin-left:25px;
     padding-top:5px;
 }
 .s-payment,.s-order-btn{
@@ -679,6 +817,11 @@ a{
     top:0;
     height:50px;
     width:90px;
+}
+.cart-counter{
+    position:absolute;
+    right:0;
+    top:-30px;
 }
 .s-payment .btn-pay{
     display:block;  
@@ -696,11 +839,11 @@ a{
     top:0;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                           
     width:30px;
 }
-.pay-row{
+.pay-account{
     line-height:18px;
 }
 
-.pay-row.total{
+.pay-account.total{
     font-weight:bold;
 }
 .cart-num .num-count:before{
@@ -727,6 +870,7 @@ a{
 
 .s-addr{
     position:relative;
+    display:block;
     padding:10px 14px;
     font-size:14px;
     background:#fff;
@@ -778,8 +922,8 @@ a{
     content:"";
     top:50%;
     -webkit-transform:translateY(-50%);
-    width:0.475rem;
-    height:.8rem;
+    width:0.375rem;
+    height:.7rem;
     right:0;
     background:url(img/arrow-right-gray.png) no-repeat;
     background-size:contain;
@@ -1140,3 +1284,38 @@ a{
     text-align:center;
     font-size:.7rem;
 }
+
+/* ==========================================================================
+   page styles.
+   pay page
+   ========================================================================== */
+.pay-row{
+    display:block;
+    padding:0 .3rem;
+    background:#fff;
+    line-height:2rem;
+    height:2rem;
+    border-bottom:1px solid #dcdcdc;
+    font-size:.7rem;
+}
+.price{
+    color:#F23030;
+}
+.icon-wechat{
+    background:url(img/icon-wechat.png) no-repeat;
+    background-size:contain;
+}
+.icon-cpay{
+    background:url(img/icon-card.png) no-repeat;
+    background-size:contain;
+}
+.icon-offline{
+    background:url(img/icon-offlinepay.png) no-repeat;
+    background-size:contain;
+}
+.icon-r{
+    display:inline-block;
+    margin-left:10px;
+}
+
+
